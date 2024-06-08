@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    // Regular
+    console.log("hello");
+
+    // Interpolated
+    console.log("Hello I Am a %s string!", "😃")
+
+    // Styled
+    console.log("%c I am some grete text", "font-size: 50px; background: red");
+
+    // warning!
+    console.warn("Oh No");
+
+    // Error :|
+    console.error("Gosh!!");
+
+    // Info
+    console.info("Fun Fact");
+
+    // Testing
+    console.assert(1 === 2, "thats wrong");
+
+    // clearing
+    // console.clear();
+
+    // Viewing DOM Elements
+    console.dir(p)
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`This is ${dog.name} is ${dog.age * 7} dog years`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    // counting
+    console.count("Wes");
+    console.count("Wes");
+    console.count("Wes");
+    console.count("Wes");
+    console.count("Wes");
+
+    // timing
+    console.time("Fetching Data");
+    fetch("https://api.github.com/users/gregoryste").then(data => data.json()).then(data => {
+      console.timeEnd("Fetching Data");
+      console.log(data)
+    });
+
+  </script>
+</body>
+</html>
