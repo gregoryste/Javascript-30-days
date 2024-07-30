@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <script type="text/javascript" src="./cornify.js"></script>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <script>
+      const pressed = [];
+      const secredCode = "secret";
+
+      window.addEventListener("keyup", (e) => {
+          pressed.push(e.key);
+          pressed.splice(-secredCode.length - 1, pressed.length - secredCode.length);
+          if(pressed.join("").includes(secredCode)) cornify_add();
+      })
+    </script>
+  </body>
+</html>
